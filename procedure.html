@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+                rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+                crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+                crossorigin="anonymous">defer</script>
+</head>
+
+<body class="body">
+    <div class="container-lg">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+            <!-- lg = large breakpoint, navbar-dark= make the text light-->
+             <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/droplet.png" alt="Water Logo" class="d-line-block align-text-top w-50">
+                </a>
+                <!--Hamburger Icon-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button> 
+
+                <!--Collapsible navbar menu with custom hover underline CSS animation-->
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <!--Links to hamburger menu button-->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="authors.html" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="procedures.html" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="results.html" class="nav-link hover-underline-animation nbMenuItem">Results</a>
+                        </li>
+                    </ul>
+                </div>
+             </div>
+        </nav>
+
+        <!-- How to use the sensor-->
+         <section class="procedure">
+            <div class="container">
+                <br>
+                <div class="text-center">
+                    <h1>Procedure</h1>
+                    <h2>Using a numbered list, describe your procedure (include picutres)</h2>
+                </div>
+                <hr><br>        <!--Horzontal line and a line break-->
+                <table class="table table-hover text-center table-light table-bordered border-dark-subtle">
+                    <thead>
+                        <tr class="table-primary">
+                            <th><h3>Step</h3></th>
+                            <th><h3>Description</h3></th>
+                            <th><h3>Images</h3></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr class="align-middle">   <!--1st row-->
+                            <th scope="row" class="table-secondary">
+                                <h3>1</h3>
+                            </th>       <!--Scope="row" specifies a row header cell-->
+                            <td><h3 class="howTo">Start Python Flask server</h3></td>
+                            <td class="text-center"><img src="img/python-logo.png"></td>
+                        </tr> <!--End first row-->
+                        <tr class="align-middle">   <!--2nd row-->
+                            <th scope="row" class="table-secondary">
+                                <h3>2</h3>
+                            </th>       <!--Scope="row" specifies a row header cell-->
+                            <td><h3 class="howTo">Insert description for step 2</h3></td>
+                            <td class="text-center"><img src="img/range-finder-tp.png"></td>
+                        </tr> <!--End second row-->
+                        <tr class="align-middle">   <!--3rd row-->
+                            <th scope="row" class="table-secondary">
+                                <h3>3</h3>
+                            </th>       <!--Scope="row" specifies a row header cell-->
+                            <td><h3 class="howTo">Insert description for step 3</h3></td>
+                            <td class="text-center"><img src="img/nano33-iot3.png"></td>
+                        </tr> <!--End third row-->
+                        <tr class="align-middle">   <!--4th row-->
+                            <th scope="row" class="table-secondary">
+                                <h3>4</h3>
+                            </th>       <!--Scope="row" specifies a row header cell-->
+                            <td><h3 class="howTo">Insert description for step 4</h3></td>
+                            <td class="text-center"><img src="img/arduino-logo.png"></td>
+                        </tr> <!--End fourth row-->
+                        <tr class="align-middle">   <!--5th row-->
+                            <th scope="row" class="table-secondary">
+                                <h3>5</h3>
+                            </th>       <!--Scope="row" specifies a row header cell-->
+                            <td><h3 class="howTo">Flask connects to firebase and sends data for storage</h3></td>
+                            <td class="text-center"><img src="img/firebase-logo.png"></td>
+                        </tr> <!--End fifth row-->
+                    </tbody>
+                </table>
+            </div>
+         </section>
+         
+        <!--Footer (Require a bootstrap icon)-->
+        <footer class="p-5 footer text-light text-center position-relative">
+            <div class="container">
+                <p class="lead">Copyright &copy; SE 2025 Bootstrap</p>
+                <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                    <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
