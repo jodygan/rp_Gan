@@ -1,24 +1,28 @@
 /* ----------------- Class CSS ----------------- */
 
+*{
+    font-family: "Lexend", sans-serif;
+}
+
 .about{
     width:400px;
     margin: auto;
 }
 
 .about-team{
-    color:rgb(82, 81, 81)
+    color:rgb(107, 112, 92)
 }
 
 .authors{
-    background-color: #dbe3e7;
+    background-color: #fff3ea;
 }
 
 .body{
-    background-color: rgb(90, 92, 92);
+    background-color: rgb(230, 235, 235);
 }
 
 .footer{
-    background-color: #023E8A;
+    background-color: #6B705C;
 }
 
 .icon-white{            /* Arrow icon at bottom of page */
@@ -26,7 +30,7 @@
 }
 
 .nb-background-color{   /* navbar background color */
-    background-color: #023E8A;
+    background-color: #6B705C;
 }
 
 .nbMenuItem{               /* navbar link text properties */
@@ -36,7 +40,7 @@
 }
 
 .overview{
-    background-color: #dbe3e7;
+    background-color: #fff3ea;
 }
 
 .ovPadLeft{
@@ -48,13 +52,14 @@
 }
 
 .procedure{
-    background-color: #dbe3e7;
+    background-color: #fff3ea;
     padding: 1px;
 }
 
 .showcase{
-    background-color: #8fa3ab; /*#0096c7*/
+    background-color: #B7B7A4; /*#0096c7*/
 }
+
 
 /* ----------------- ID CSS ----------------- */
 
