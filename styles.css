@@ -26,7 +26,7 @@
 }
 
 .icon-white{            /* Arrow icon at bottom of page */
-    color: #FFFFFF;
+    color: #eae6e6;
 }
 
 .nb-background-color{   /* navbar background color */
@@ -86,4 +86,8 @@
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
+}
+
+th{
+    background-color: #B7B7A4 !important;
 }
