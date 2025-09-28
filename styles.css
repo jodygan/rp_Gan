@@ -60,6 +60,9 @@
     background-color: #B7B7A4; /*#0096c7*/
 }
 
+th{
+    background-color: #B7B7A4 !important;
+}
 
 /* ----------------- ID CSS ----------------- */
 
@@ -86,8 +89,4 @@
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
-}
-
-th{
-    background-color: #B7B7A4 !important;
 }
