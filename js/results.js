@@ -1,5 +1,5 @@
 async function getData(){
-    const response = await fetch('../growth-data.csv');       //.. to move up one folder 
+    const response = await fetch('data/growth-data.csv');       //.. to move up one folder 
     const data = await response.text()                                  // CSV to TEXT format
     console.log(data);
 
@@ -70,7 +70,7 @@ async function createChart(){
                 ticks: {                      // x-axis tick mark properties
                     callback: function(val, index){
                         // Set the tick marks at every 5 years
-                        return index % 1 === 0 ? this.getLabelForValue(val) : '';
+                        return index % 1 === 0 ? this.getLabelForValue(val):'';
                     },
                 font: {
                     size: 14  
