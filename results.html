@@ -13,13 +13,60 @@
                 crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
     <script src="js/results.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="background">
-    <section class="chartjs-sample">
-        <div class="container d-flex overflow-hidden bg-light rounded-4" id="chart-wrapper">
-            <canvas id="results"></canvas>
-        </div>
-    </section>
+<body class="body">
+    <div class="container-lg">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+            <!-- lg = large breakpoint, navbar-dark= make the text light-->
+             <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/agarplate-clipart().png" alt="Agar Plate Logo" class="d-line-block align-text-top w-50">
+                </a>
+                <!--Hamburger Icon-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button> 
+
+                <!--Collapsible navbar menu with custom hover underline CSS animation-->
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <!--Links to hamburger menu button-->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="author.html" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="procedure.html" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="results.html" class="nav-link hover-underline-animation nbMenuItem">Results</a>
+                        </li>
+                    </ul>
+                </div>
+             </div>
+        </nav>
+
+        <section class="chartjs-sample">
+            <div class="container d-flex overflow-hidden bg-light rounded-4" id="chart-wrapper">
+                <canvas id="results"></canvas>
+            </div>
+        </section>
+
+        <!--Footer (Require a bootstrap icon)-->
+        <footer class="p-5 footer text-light text-center position-relative">
+            <div class="container">
+                <p class="lead">Copyright &copy; SE 2025 Bootstrap</p>
+                <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                    <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+    
 </body>
+
 </html>

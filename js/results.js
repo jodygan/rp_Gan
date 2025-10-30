@@ -4,7 +4,6 @@ async function getData(){
     console.log(data);
 
     const xTimes=[];                        // x-axis label = time in days
-    const yAmountLB=[];                     // y-axis = amount of luria broth used
     const yObserved=[];                     // y-axis = # observed growth
     const yNObserved=[];                      // y-axis = # of no observed growth
 
@@ -17,26 +16,23 @@ async function getData(){
 
     table.forEach(row =>{
         const columns = row.split(',')
-        const time = parseFloat(columns[0]);        // Assign year value
+        const time = columns[0];        // Assign year value
         xTimes.push(time)                           // Push each year into array for years
 
-        const amount = parseFloat(columns[1]);        // Convert global temp. to float
-        yAmountLB.push(amount);                     // Push temp values to array and reference to 0-deg C.
+        const observed = parseFloat(columns[2]);     
+        yObserved.push(observed);                   
 
-        const observed = parseFloat(columns[2]);      // Convert NH temp. to float
-        yObserved.push(observed);                   // Push temp values to array and reference to 0-deg C.
+        const noObserved = parseFloat(columns[3]);     
+        yNObserved.push(noObserved);                   
 
-        const noObserved = parseFloat(columns[3]);      // Convert SH temp. to float
-        yNObserved.push(noObserved);                   // Push temp values to array and reference to 0-deg C
-
-        console.log(time, amount, observed, noObserved);
+        console.log(time, observed, noObserved);
     });
 
-    return {xTimes, yAmountLB, yObserved, yNObserved}     // Use {} to return multiple values as an object
+    return {xTimes, yObserved, yNObserved};     
 }
 
 async function createChart(){
-    const data = await getData();                   // createChart will wait for getData() to process 
+    const data = await getData();                   
     const barChart = document.getElementById('results');
 
     const myChart = new Chart(barChart, {  // Construct the chart    
@@ -48,11 +44,6 @@ async function createChart(){
                                     //  place a comma after the closing curly brace of the last
                                     //  data set object and add another dataset object. 
             {
-                label:    'Amount of LB Used (mL)',     
-                data:     data.yAmountLB,    
-                borderWidth:      1   // Data marker border width
-            },
-            {
                 label:    'Number of Trials that Observed Growth',     
                 data:     data.yObserved,    
                 borderWidth:      1   // Data marker border width
@@ -61,7 +52,7 @@ async function createChart(){
                 label:    'Number of Trials that did not Observe Growth',     
                 data:     data.yNObserved,    
                 borderWidth:      1   // Data marker border width
-            },
+            }
     ]
     },
     options: {                        // Define display chart display options 
@@ -79,7 +70,7 @@ async function createChart(){
                 ticks: {                      // x-axis tick mark properties
                     callback: function(val, index){
                         // Set the tick marks at every 5 years
-                        return index % 5 === 0 ? this.getLabelForValue(val) : '';
+                        return index % 1 === 0 ? this.getLabelForValue(val) : '';
                     },
                 font: {
                     size: 14  
