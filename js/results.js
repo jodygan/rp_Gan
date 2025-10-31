@@ -1,11 +1,11 @@
 async function getData(){
-    const response = await fetch('data/growthdata.csv');       //.. to move up one folder 
-    const data = await response.text()                                  // CSV to TEXT format
+    const response = await fetch('data/growthdata.csv');       
+    const data = await response.text()                               
     console.log(data);
 
     const xTimes=[];                        // x-axis label = time in days
     const yObserved=[];                     // y-axis = # observed growth
-    const yNObserved=[];                      // y-axis = # of no observed growth
+    const yNObserved=[];                    // y-axis = # of no observed growth
 
     // \n - new line character
     // split('\n') - will separate the table into an array of individual rows
@@ -16,8 +16,8 @@ async function getData(){
 
     table.forEach(row =>{
         const columns = row.split(',')
-        const time = columns[0];        // Assign year value
-        xTimes.push(time)                           // Push each year into array for years
+        const time = columns[0];        
+        xTimes.push(time)        
 
         const observed = parseFloat(columns[2]);     
         yObserved.push(observed);                   
@@ -39,10 +39,7 @@ async function createChart(){
     type: 'bar',
     data: {                         // Define data
         labels: data.xTimes,        // x-axis labels
-        datasets: [                 // Each object describes one dataset of y-values
-                                    //  including display properties.  To add more datasets, 
-                                    //  place a comma after the closing curly brace of the last
-                                    //  data set object and add another dataset object. 
+        datasets: [                           
             {
                 label:    'Number of Trials that Observed Growth',     
                 data:     data.yObserved,    
@@ -60,19 +57,21 @@ async function createChart(){
         maintainAspectRatio: false,
         scales: {                     // Display options for x & y axes
             x: {                      // x-axis properties
+                stacked: true,
                 title: {
                     display: true,
                     text: 'Time (in days)',
-                    font: {                   // font properties
+                    font: {   
+                        family: "Lexend",                // font properties
                         size: 14
                     },
                 },
                 ticks: {                      // x-axis tick mark properties
                     callback: function(val, index){
-                        // Set the tick marks at every 5 years
                         return index % 1 === 0 ? this.getLabelForValue(val):'';
                     },
                 font: {
+                    family: "Lexend",
                     size: 14  
                 },
                 },
@@ -81,11 +80,13 @@ async function createChart(){
                 }
             },
             y: {                              // y-axis properties
+                stacked: true,
                 beginAtZero: true,
                 title: {
                     display: true,                          
-                    text: 'Number of Trials Growth',     // y-axis title
+                    text: 'Number of Trials Grown',     // y-axis title
                     font: {
+                        family: "Lexend",
                         size: 12
                     },
                 },
@@ -93,6 +94,7 @@ async function createChart(){
                     min: 0,                   
                     maxTicksLimit: 20,
                     font: {
+                        family: "Lexend",
                         size: 12
                     }
                 },
@@ -106,6 +108,7 @@ async function createChart(){
                 display: true,
                 text: 'Factors of Growth Summative Chart',
                 font: {
+                    family: "Lexend",
                     size: 24,
                 },
                 color: '#black',

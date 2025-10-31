@@ -1,8 +1,8 @@
 Time Range,Total Trials,Observed Growth,No Observed Growth
-"Less than or equal to 6: 500mL",1,0,1
-"Less than or equal to 6: 15mL",1,1,0
-"Less than or equal to 6: 10mL",1,0,1
-"Less than or equal to 6: 4mL",1,1,0
-"7 to 14: 15mL",16,16,0
-"More than 15: 15mL",1,1,0
-"More than 15: 15mL",12,4,8
+"<= 6: 500mL",1,0,1
+"<= 6: 15mL",1,1,0
+"<= 6: 10mL",1,0,1
+"<= 6: 4mL",1,1,0
+"7-14: 15mL",16,16,0
+"> 15: 10mL",1,1,0
+"> 15: 15mL",12,4,8
