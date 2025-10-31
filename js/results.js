@@ -60,7 +60,7 @@ async function createChart(){
                 stacked: true,
                 title: {
                     display: true,
-                    text: 'Time (in days)',
+                    text: 'Time (days) : Amount of LB Used (mL)',
                     font: {   
                         family: "Lexend",                // font properties
                         size: 14
@@ -111,7 +111,7 @@ async function createChart(){
                     family: "Lexend",
                     size: 24,
                 },
-                color: '#black',
+                color: '#6B705C',
                 padding: {
                     top: 10,
                     bottom: 30
